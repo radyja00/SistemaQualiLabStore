@@ -121,11 +121,7 @@ function adicionarCarrinho(id) {
 
   carrinho.push(produto);
 
-  if (primeiraAdicaoNoCarrinho == true) {
-    carrinho.push(produto);
-    primeiraAdicaoNoCarrinho = false;
-  }
-
+ 
   atualizarCarrinho();
   registrarAcao("Produto adicionado ao carrinho: " + produto.nome);
 }
