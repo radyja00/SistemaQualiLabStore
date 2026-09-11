@@ -128,13 +128,13 @@ function renderizarProdutos(lista) {
     card.className = "card-produto";
 
     if (produto.id == 4) {
-      card.innerHTML = '<img src="' + produto.imagem + '">' +
+      card.innerHTML = '<img src="' + produto.imagem + '" alt="' + produto.nome + '">' +
         '<h3>' + produto.nome + '</h3>' +
         '<p>' + produto.descricao + '</p>' +
         '<p class="preco">R$ ' + produto.preco.toFixed(2).replace(".", ",") + '</p>' +
         '<button onclick="adicionarCarrinho(' + produto.id + ')">Adicionar</button>';
     } else {
-      card.innerHTML = '<img src="' + produto.imagem + '" alt="">' +
+      card.innerHTML = '<img src="' + produto.imagem + '" alt="' + produto.nome + '">' +
         '<h3>' + produto.nome + '</h3>' +
         '<p>' + produto.descricao + '</p>' +
         '<p class="preco">R$ ' + produto.preco.toFixed(2).replace(".", ",") + '</p>' +
