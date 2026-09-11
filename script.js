@@ -199,11 +199,11 @@ function ordenarProdutos() {
   var lista = produtos.slice();
 
   if (ordem === "menor") {
-    lista.sort(function (a, b) { return b.preco - a.preco; });
+    lista.sort(function (a, b) { return a.preco - b.preco; });
   }
 
   if (ordem === "maior") {
-    lista.sort(function (a, b) { return a.preco - b.preco; });
+    lista.sort(function (a, b) { return b.preco - a.preco; });
   }
 
   renderizarProdutos(lista);
