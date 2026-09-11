@@ -33,7 +33,7 @@ var produtos = [
   { id: 1, nome: "Curso de JavaScript", preco: 89.90, descricao: "Curso introdutório com aulas gravadas.", imagem: "https://picsum.photos/seed/1/400/200" },
   { id: 2, nome: "Curso de HTML e CSS", preco: 59.90, descricao: "Fundamentos de páginas web.", imagem: "https://picsum.photos/seed/2/400/200" },
   { id: 3, nome: "E-book Qualidade de Software", preco: 29.90, descricao: "Material digital para estudo.", imagem: "https://picsum.photos/seed/3/400/200" },
-  { id: 4, nome: "Mentoria Acadêmica", preco: 199.90, descricao: "Encontro online com especialista.", imagem: "imagem-quebrada-produto-4.jpg" },
+  { { id: 4, nome: "Mentoria Acadêmica", preco: 199.90, descricao: "Encontro online com especialista.", imagem: "https://picsum.photos/seed/4/400/200" },
   { id: 5, nome: "Template de Projeto", preco: 19.90, descricao: "Modelo de documentação acadêmica.", imagem: "https://picsum.photos/seed/5/400/200" },
   { id: 6, nome: "Pacote de Exercícios", preco: 39.90, descricao: "Exercícios práticos para programação.", imagem: "https://picsum.photos/seed/6/400/200" }
 ];
