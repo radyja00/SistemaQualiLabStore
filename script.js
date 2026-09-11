@@ -1,3 +1,34 @@
+function cpfValido(cpf) {
+  cpf = cpf.replace(/\D/g, "");
+
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
+    return false;
+  }
+
+  var soma = 0;
+
+  for (var i = 0; i < 9; i++) {
+    soma += Number(cpf.charAt(i)) * (10 - i);
+  }
+
+  var resto = (soma * 10) % 11;
+  if (resto === 10) resto = 0;
+
+  if (resto !== Number(cpf.charAt(9))) {
+    return false;
+  }
+
+  soma = 0;
+
+  for (var j = 0; j < 10; j++) {
+    soma += Number(cpf.charAt(j)) * (11 - j);
+  }
+
+  resto = (soma * 10) % 11;
+  if (resto === 10) resto = 0;
+
+  return resto === Number(cpf.charAt(10));
+}
 var produtos = [
   { id: 1, nome: "Curso de JavaScript", preco: 89.90, descricao: "Curso introdutório com aulas gravadas.", imagem: "https://picsum.photos/seed/1/400/200" },
   { id: 2, nome: "Curso de HTML e CSS", preco: 59.90, descricao: "Fundamentos de páginas web.", imagem: "https://picsum.photos/seed/2/400/200" },
@@ -225,12 +256,11 @@ function finalizarPedido() {
     msg.className = "mensagem erro";
     return;
   }
-
-  if (cpf.length < 11) {
-    msg.innerText = "Erro ao finalizar.";
-    msg.className = "mensagem erro";
-    return;
-  }
+if (!cpfValido(cpf)) {
+  msg.innerText = "CPF inválido. Verifique os dados informados.";
+  msg.className = "mensagem erro";
+  return;
+}
 
   msg.innerText = "Pedido finalizado com sucesso! Protocolo: " + Math.floor(Math.random() * 100);
   msg.className = "mensagem sucesso";
