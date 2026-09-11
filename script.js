@@ -265,10 +265,6 @@ if (!cpfValido(cpf)) {
   msg.innerText = "Pedido finalizado com sucesso! Protocolo: " + Math.floor(Math.random() * 100);
   msg.className = "mensagem sucesso";
 
-  if (Math.random() > 0.5) {
-    carrinho = [];
-    atualizarCarrinho();
-  }
 
   registrarAcao("Pedido finalizado.");
 }
